@@ -1,0 +1,18 @@
+# Task You will be provided with a German transcript of a mathematics lesson segment focusing on quadratic equations. The transcript was produced by automatic speech recognition with speaker diarization: each utterance is shown as (Speaker: text), where the speaker role is Teacher or Student. In the spoken text itself, names are anonymised, with L for the teacher and S, S01, S02, etc. for students. Your task is to assess the teaching quality dimension of 'Nature of Discourse', which evaluates whether students have opportunities to participate in the classroom discourse and whether students' discourse is characterized by detailed contributions. Discourse is teacher-directed when the teacher lectures or controls the flow of communication through short question-answer exchanges. A detailed student contribution is one in which a student elaborates a mathematical idea, procedure, or line of reasoning beyond a brief answer, single value, or yes/no response.
+# Rating Scale (1-4, low to high)
+* Score 1: Discourse is teacher-directed. Students' discourse does not include any detailed contributions.
+* Score 2: Discourse is frequently teacher-directed. Students' discourse is rarely characterized by detailed contributions.
+* Score 3: Discourse is sometimes teacher-directed. Students' discourse is sometimes characterized by detailed contributions.
+* Score 4: Discourse is rarely teacher-directed. Students' discourse is frequently characterized by detailed contributions.
+# Instructions Analyze the transcript following these steps:
+1. Read the transcript carefully,
+2. Assess how strongly the teacher directs the discourse (lecturing, controlling turns, short question-answer exchanges) versus how much room students have to shape it,
+3. Identify student contributions and judge how many of them are detailed (elaborated mathematical ideas or reasoning) rather than brief answers,
+4. Rate the transcript based on the coding rubrics.
+Provide a JSON response with a rating and no need to provide the explanation. please dont provide any text, except for a json {{  "rating": <integer score> }}
+
+# Transcript to Rate
+
+```
+{transcript}
+```

@@ -1,0 +1,58 @@
+# Python >=3.10 required (uses `X | None` return-type syntax in several scripts,
+# e.g. gpt5_diarized.py, claude_nod_diarized_v2.py).
+
+# --- Core ML / audio stack ---
+torch==2.13.0
+torchaudio==2.11.0
+transformers==5.14.1
+datasets==2.18.0
+evaluate==0.4.5
+jiwer==3.1.0
+accelerate==1.12.0
+peft==0.18.0
+bitsandbytes
+librosa==0.11.0
+soundfile==0.13.1
+numpy==1.26.4
+pyarrow==21.0.0
+regex==2026.7.19
+tqdm==4.67.1
+whisperx==3.7.4
+wandb==0.23.1
+
+# --- ASR models ---
+openai-whisper==20250625
+nemo-toolkit==2.4.0
+omnilingual-asr==0.1.0
+
+# --- Diarization ---
+pyannote.audio==3.3.0
+pyannoteai-sdk==0.3.0
+brouhaha @ https://github.com/marianne-m/brouhaha-vad/archive/main.zip  # SNR/audio-quality predictions, not on PyPI
+
+# --- NLP (spacy + language models, nltk) ---
+spacy==3.8.8
+nltk==3.9.2
+en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl
+
+# --- Proprietary model API clients ---
+openai==2.15.0         
+anthropic==0.117.0     
+google-genai>=1.0.0     
+requests==2.32.5       
+
+# --- Local open-weight inference (Apertus, OLMo) ---
+# Not installed in this project's .venv -- these run on a separate GPU
+# machine/Slurm allocation (see apertus_large/run_70b_*.py docstrings).
+# Version floors below are unverified; confirm against whatever the actual
+# inference machine has installed. Left commented out here because
+# torch/transformers/accelerate are already pinned above for this venv --
+# pip errors on a duplicate requirement for the same package name.
+# torch>=2.1
+# transformers>=4.45    # needs a version with Apertus/Olmo-3 support
+# accelerate>=0.30      # required for device_map="auto" multi-GPU sharding
+
+# --- QWK / bootstrap analysis and figures ---
+# numpy pinned to 1.26.4 above (this section originally pinned ==2.4.1;
+# downgraded to satisfy librosa/whisperx -- verify QWK analysis still works)
+matplotlib==3.10.8

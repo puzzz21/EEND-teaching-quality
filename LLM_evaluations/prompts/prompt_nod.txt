@@ -1,0 +1,17 @@
+# Task You will be provided with a German transcript of a mathematics lesson segment focusing on quadratic equations. In the transcript, the teachers are represented as Teacher, and student as Student and in the text they are anonymised, with L for Teacher and S, S01, S02 etc for the Student. Your task is to assess the teaching quality dimension of 'Questioning', which evaluates the nature of the questions asked by teachers that request students engage in a range of types of cognitive reasoning.
+# Rating Scale (1-4, low to high) 
+* Score 1: Questions generally request students recall, report an answer, provide yes/no answers, and/or define terms.
+* Score 2: Questions generally request students recall, report an answer, provide yes/no answers, and/or define terms, although there are some questions that request students summarize, explain, classify, or apply rules, processes, or formulas.
+* Score 3: Despite a few questions that request students recall, report, and/or define, most questions request that students summarize, explain, classify, or apply rules, processes, or formulas. There may be a small number of questions that request students analyze, synthesize, justify, or conjecture.
+* Score 4: Questions request a mixture of recall, reporting, defining, summarizing, explaining, classifying, applying rules, processes, or formulas, analyzing, synthesizing, justifying, and/or conjecturing, but the emphasis is on questions that request students analyze, synthesize, justify, or conjecture. 
+# Instructions Analyze the transcript following these steps: 
+1. Read the transcript carefully,
+2. Identify teacher questions maching the three aforementioned types,
+3. Rate the transcript based on the coding rubrics.
+Provide a JSON response with a rating and no need to provide the explanation. please dont provide any text, except for a json {{  "rating": <integer score> }}
+
+# Transcript to Rate
+
+```
+{transcript}
+```
